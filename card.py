@@ -5,7 +5,7 @@
 class Card:
     '''Class to implement card objects representing cards in Slay the Spire'''
 
-    def __init__(self, cardName, cardClass, baseScore, cost, synergyType, synergyStrength, offenseRating):
+    def __init__(self, cardName, cardClass, baseScore, cost, synergyType, synergyStrength, offenseRating, energyGain):
         '''a list of attributes to add to later if we have additional considerations
         @param cardName - Name of the card
         @param cardClass - What class the card belongs to (Ironclad, Defect, Silent, Watcher, Neutral)
@@ -30,6 +30,7 @@ class Card:
         self.synergyType = synergyType
         self.synergyStrength = synergyStrength
         self.offenseRating = offenseRating
+        self.energyGain = energyGain
 
     def __eq__(self, other):
         '''Overriding equals because fuck object locations'''
@@ -39,7 +40,8 @@ class Card:
                 self.cost == other.cost and\
                 self.synergyType == other.synergyType and\
                 self.synergyStrength == other.synergyStrength and\
-                self.offenseRating == other.offenseRating:
+                self.offenseRating == other.offenseRating and\
+                self.energyGain == other.energyGain:
             return True
         return False
 

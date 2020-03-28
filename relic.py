@@ -1,6 +1,6 @@
 
 
-class Relic:
+class relic:
         def __init__(self, rarity, synergy, energy):
             self.rarity = rarity
             self.synergy = synergy
