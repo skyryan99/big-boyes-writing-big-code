@@ -58,7 +58,7 @@ class Card:
         typeList = typeList[:-2]
         return(self.cardName + ':\n    Class: ' + self.cardClass + '\n    Base Score: ' + str(self.baseScore) + '\n    Cost: ' + str(self.cost)
                 + '\n    Synergies: ' + typeList + '\n    Synergy Strength: ' + str(self.synergyStrength) + '\n    Offense: '  + str(self.offenseRating)
-                + '\n    Energy Gain: ' + str(self.energyGain) + '\n    Upgraded?: ' +self.upgrade + '\n    Upgraded Score: ' + str(self.upgradeScore))
+                + '\n    Energy Gain: ' + str(self.energyGain) + '\n    Upgraded: ' + str(bool(self.upgrade)) + '\n    Upgraded Score: ' + str(self.upgradeScore))
 
     def format(self):
         '''in case you forget what order to put the cards in'''
