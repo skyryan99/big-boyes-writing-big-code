@@ -32,17 +32,16 @@ class Card:
                 self.cost == other.cost and\
                 self.synergyType == other.synergyType and\
                 self.synergyStrength == other.synergyStrength and\
-                self.offenseRating == other.offenseRating
+                self.offenseRating == other.offenseRating:
             return True
         return False
 
     def __str__(self):
         '''Overriding print statement because FFFFUUUUUCK hex'''
         return(self.cardName + ':\n    ' + self.cardClass + '\n    ' + self.baseScore + '\n    ' + self.cost
-                + '\n    ' + self.synergyType + '\n    ' + self.syergyStrength + '\n    ' self.offenseRating)
+                + '\n    ' + self.synergyType + '\n    ' + self.syergyStrength + '\n    '  + self.offenseRating)
 
     def format(self):
         '''in case you forget what order to put the cards in'''
-        print("1. card name, 2. card class, 3. base score, 4. cost, 
-                5. synergy type, 6. synergy strength, 7. offense rating(0 ->10)")
+        print("1. card name, 2. card class, 3. base score, 4. cost, 5. synergy type, 6. synergy strength, 7. offense rating(0 ->10)")
         return
