@@ -51,8 +51,12 @@ class Card:
 
     def __str__(self):
         '''Overriding print statement because FFFFUUUUUCK hex'''
-        return(self.cardName + ':\n    ' + self.cardClass + '\n    ' + self.baseScore + '\n    ' + self.cost
-                + '\n    ' + self.synergyType + '\n    ' + self.synergyStrength + '\n    '  + self.offenseRating + '\n    ' + self.energyGain + '\n    ' +self.energyGain + '\n    ' + self.upgradeScore)
+        typeList =""
+        for type in self.synergyType:
+            typeList += type
+        return(self.cardName + ':\n    ' + self.cardClass + '\n    ' + str(self.baseScore) + '\n    ' + str(self.cost)
+                + '\n    ' + typeList + '\n    ' + str(self.synergyStrength) + '\n    '  + str(self.offenseRating)
+               + '\n    ' + str(self.energyGain) + '\n    ' +self.upgrade + '\n    ' + str(self.upgradeScore))
 
     def format(self):
         '''in case you forget what order to put the cards in'''
