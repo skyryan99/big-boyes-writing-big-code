@@ -13,6 +13,13 @@ class Card:
             thing to consider
         @param cost - How much energy the card costs
         @param synergyType - What synergy group the card belongs to
+            #strike
+            #exhuast
+            #block
+            #strength
+            #x-times
+            #minus_hp
+            #status
         @param synergyStrength - How heavily the card plays into the given synergy type
         @param offenseRating - How offensive vs. defensive the card is from 0 being very defensive -> 10
             being very offensive'''
