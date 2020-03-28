@@ -5,7 +5,7 @@
 class Card:
     '''Class to implement card objects representing cards in Slay the Spire'''
 
-    def __init__(self, cardName, cardClass, baseScore, cost, synergyType, synergyStrength, offenseRating, energyGain, upgradeScore, upgrade=False):
+    def __init__(self, cardName, cardClass, baseScore, cost, synergyType, synergyStrength, offenseRating, energyGain, repeatability, upgradeScore, upgrade=False):
         '''a list of attributes to add to later if we have additional considerations
         @param cardName - Name of the card
         @param cardClass - What class the card belongs to (Ironclad, Defect, Silent, Watcher, Neutral)
@@ -33,10 +33,13 @@ class Card:
         self.energyGain = energyGain
         self.upgrade = upgrade
         self.upgradeScore = upgradeScore
+        self.repeatability = repeatability
 
     def __eq__(self, other):
         '''Overriding equals because fuck object locations'''
-        if self.cardName == other.cardName and \
+        if self.cardName == other.cardName:
+
+                """and \
                 self.cardClass == other.cardClass and\
                 self.baseScore == other.baseScore and\
                 self.cost == other.cost and\
@@ -45,8 +48,9 @@ class Card:
                 self.offenseRating == other.offenseRating and\
                 self.energyGain == other.energyGain and\
                 self.upgrade == other.upgrade and\
-                self.upgradeScore == other.upgradeScore:
-            return True
+                self.repeatability == repeatability and\
+                self.upgradeScore == other.upgradeScore:"""
+                return True
         return False
 
     def __str__(self):
@@ -63,7 +67,7 @@ class Card:
         typeList = typeList[:-2]
         return(self.cardName + ':\n    Class: ' + self.cardClass + '\n    Base Score: ' + str(self.baseScore) + '\n    Cost: ' + str(self.cost)
                 + '\n    Synergies: ' + typeList + '\n    Synergy Strength: ' + strengthList + '\n    Offense: '  + str(self.offenseRating)
-                + '\n    Energy Gain: ' + str(self.energyGain) + '\n    Upgraded: ' + str(self.upgrade) + '\n    Upgraded Score: ' + str(self.upgradeScore))
+                + '\n    Energy Gain: ' + str(self.energyGain) + '\n   Repeatability: ' + str(self.repeatability) + '\n    Upgraded: ' + str(self.upgrade) + '\n    Upgraded Score: ' + str(self.upgradeScore))
 
     def format(self):
         '''in case you forget what order to put the cards in'''
