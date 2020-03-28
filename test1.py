@@ -1,4 +1,4 @@
 from card import *
 
-TestCard = Card('Test', 'Ironclad', 3, 100, ['Strike', 'Strength'], 12, 8, 2, '1', 100)
+TestCard = Card('Test', 'Ironclad', 100, 3, ['Strike', 'Strength'], [1, 8], 8, 2, 100)
 print(TestCard)

@@ -5,7 +5,7 @@
 class Card:
     '''Class to implement card objects representing cards in Slay the Spire'''
 
-    def __init__(self, cardName, cardClass, baseScore, cost, synergyType, synergyStrength, offenseRating, energyGain, upgrade=False, upgradeScore):
+    def __init__(self, cardName, cardClass, baseScore, cost, synergyType, synergyStrength, offenseRating, energyGain, upgradeScore, upgrade=False):
         '''a list of attributes to add to later if we have additional considerations
         @param cardName - Name of the card
         @param cardClass - What class the card belongs to (Ironclad, Defect, Silent, Watcher, Neutral)
