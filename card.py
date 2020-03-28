@@ -5,7 +5,7 @@
 class Card:
     '''Class to implement card objects representing cards in Slay the Spire'''
 
-    def __init__(self, cardName, cardClass, baseScore, cost, synergyType, synergyStrength, offenseRating, energyGain, upgrade, upgradeScore):
+    def __init__(self, cardName, cardClass, baseScore, cost, synergyType, synergyStrength, offenseRating, energyGain, upgrade=False, upgradeScore):
         '''a list of attributes to add to later if we have additional considerations
         @param cardName - Name of the card
         @param cardClass - What class the card belongs to (Ironclad, Defect, Silent, Watcher, Neutral)
@@ -62,8 +62,8 @@ class Card:
         strengthList = strengthList[:-2]
         typeList = typeList[:-2]
         return(self.cardName + ':\n    Class: ' + self.cardClass + '\n    Base Score: ' + str(self.baseScore) + '\n    Cost: ' + str(self.cost)
-                + '\n    Synergies: ' + typeList + '\n    Synergy Strength: ' + strengthList + '\n    Offense: '  + str(self.offenseRating)
-                + '\n    Energy Gain: ' + str(self.energyGain) + '\n    Upgraded?: ' +self.upgrade + '\n    Upgraded Score: ' + str(self.upgradeScore))
+                + '\n    Synergies: ' + typeList + '\n    Synergy Strength: ' + str(self.synergyStrength) + '\n    Offense: '  + str(self.offenseRating)
+                + '\n    Energy Gain: ' + str(self.energyGain) + '\n    Upgraded: ' + str(self.upgrade) + '\n    Upgraded Score: ' + str(self.upgradeScore))
 
     def format(self):
         '''in case you forget what order to put the cards in'''
