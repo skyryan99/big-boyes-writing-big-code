@@ -57,12 +57,12 @@ class Card:
             typeList += ", "
         strengthList = ""
         for strength in self.synergyStrength:
-            strengthList += strength
+            strengthList += str(strength)
             strengthList += ", "
         strengthList = strengthList[:-2]
         typeList = typeList[:-2]
         return(self.cardName + ':\n    Class: ' + self.cardClass + '\n    Base Score: ' + str(self.baseScore) + '\n    Cost: ' + str(self.cost)
-                + '\n    Synergies: ' + typeList + '\n    Synergy Strength: ' + str(self.synergyStrength) + '\n    Offense: '  + str(self.offenseRating)
+                + '\n    Synergies: ' + typeList + '\n    Synergy Strength: ' + strengthList + '\n    Offense: '  + str(self.offenseRating)
                 + '\n    Energy Gain: ' + str(self.energyGain) + '\n    Upgraded: ' + str(self.upgrade) + '\n    Upgraded Score: ' + str(self.upgradeScore))
 
     def format(self):
