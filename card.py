@@ -5,7 +5,7 @@
 class Card:
     '''Class to implement card objects representing cards in Slay the Spire'''
 
-    def __init__(self, cardName, cardClass, baseScore, cost, synergyType, synergyStrength, offenseRating, energyGain):
+    def __init__(self, cardName, cardClass, baseScore, cost, synergyType, synergyStrength, offenseRating, energyGain, upgrade, upgradeScore):
         '''a list of attributes to add to later if we have additional considerations
         @param cardName - Name of the card
         @param cardClass - What class the card belongs to (Ironclad, Defect, Silent, Watcher, Neutral)
@@ -31,6 +31,8 @@ class Card:
         self.synergyStrength = synergyStrength
         self.offenseRating = offenseRating
         self.energyGain = energyGain
+        self.upgrade = upgrade
+        self.upgradeScore = upgradeScore
 
     def __eq__(self, other):
         '''Overriding equals because fuck object locations'''
@@ -41,14 +43,16 @@ class Card:
                 self.synergyType == other.synergyType and\
                 self.synergyStrength == other.synergyStrength and\
                 self.offenseRating == other.offenseRating and\
-                self.energyGain == other.energyGain:
+                self.energyGain == other.energyGain and\
+                self.upgrade == other.upgrade and\
+                self.upgradeScore == other.upgradeScore:
             return True
         return False
 
     def __str__(self):
         '''Overriding print statement because FFFFUUUUUCK hex'''
         return(self.cardName + ':\n    ' + self.cardClass + '\n    ' + self.baseScore + '\n    ' + self.cost
-                + '\n    ' + self.synergyType + '\n    ' + self.synergyStrength + '\n    '  + self.offenseRating)
+                + '\n    ' + self.synergyType + '\n    ' + self.synergyStrength + '\n    '  + self.offenseRating + '\n    ' + self.energyGain + '\n    ' +self.energyGain + '\n    ' + self.upgradeScore)
 
     def format(self):
         '''in case you forget what order to put the cards in'''
