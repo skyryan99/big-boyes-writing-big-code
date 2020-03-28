@@ -55,6 +55,11 @@ class Card:
         for type in self.synergyType:
             typeList += type
             typeList += ", "
+        strengthList = ""
+        for strength in self.synergyStrength:
+            strengthList += strength
+            strengthList += ", "
+        strengthList = strengthList[:-2]
         typeList = typeList[:-2]
         return(self.cardName + ':\n    Class: ' + self.cardClass + '\n    Base Score: ' + str(self.baseScore) + '\n    Cost: ' + str(self.cost)
                 + '\n    Synergies: ' + typeList + '\n    Synergy Strength: ' + str(self.synergyStrength) + '\n    Offense: '  + str(self.offenseRating)
