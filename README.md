@@ -14,6 +14,8 @@ for big boyes who write big code
     Card rating,
     Synergy rating,
     Energy gain
+    Upgraded bool,
+    Upgrade Score
   4. Relic objects:
     Relic name,
     Synergy group,
