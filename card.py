@@ -5,7 +5,7 @@
 class Card:
     '''Class to implement card objects representing cards in Slay the Spire'''
 
-    def __init__(self, cardName, cardClass, baseScore, cost, synergyType, synergyStrength, offenseRating, energyGain, repeatability, upgradeScore, statsRating, upgrade=False):
+    def __init__(self, cardName, cardClass, baseScore, cost, synergyType, synergyStrength, offenseRating, energyGain, repeatability, upgradeScore, upgrade=False):
         '''a list of attributes to add to later if we have additional considerations
         @param cardName - Name of the card
         @param cardClass - What class the card belongs to (Ironclad, Defect, Silent, Watcher, Neutral)
@@ -34,7 +34,7 @@ class Card:
         self.upgrade = upgrade
         self.upgradeScore = upgradeScore
         self.repeatability = repeatability
-        self.statsRating = statsRating
+        """self.statsRating = statsRating"""
 
     def __eq__(self, other):
         '''Overriding equals because fuck object locations'''
@@ -60,7 +60,7 @@ class Card:
         return(self.cardName + ':\n    Class: ' + self.cardClass + '\n    Base Score: ' + ', '.join(self.baseScore) + '\n    Cost: ' + str(self.cost)
                 + '\n    Synergies: ' + ' ,'.join(self.synergyType) + '\n    Synergy Strength: ' + ', '.join(self.synergyStrength) + '\n    Offense: '  + str(self.offenseRating)
                 + '\n    Energy Gain: ' + str(self.energyGain) + '\n   Repeatability: ' + str(self.repeatability) + '\n    Upgraded: ' + str(self.upgrade)
-               + '\n    Upgraded Score: ' + str(self.upgradeScore) + str(self.statsRating) )
+               + '\n    Upgraded Score: ' + str(self.upgradeScore) )
 
     def format(self):
         '''in case you forget what order to put the cards in'''
